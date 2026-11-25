@@ -10,7 +10,7 @@
 
 ## 下载
 
-在 [Releases](https://github.com/Riyel-Sinix/pdf-viewer/releases/latest) 里：
+在 [Releases](https://github.com/Riyel-Sinix/folio-pdf/releases/latest) 里：
 
 - **`PDF-Viewer_…_x64-setup.exe`**：安装版，装好后可以设为 .pdf 的默认打开方式（装在当前用户下，不需要管理员权限）；
 - **`PDF-Viewer_…_x64-portable.exe`**：免安装，下载下来双击就能用。
