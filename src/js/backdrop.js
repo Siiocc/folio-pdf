@@ -1,5 +1,5 @@
 // 背景：窗口最底下铺的画（#dayplate）。默认「今日之诗」——和课表站同一天同一首诗的 Copy Z 原版插图，每天换一幅；
-// 也能换成 Chrome 主题（Riyel-Sinix/chrome-blake-theme）的三幅水彩（tools/make-backdrops.py 做的 assets/backdrops/）、
+// 也能换成五幅水彩插画（assets/backdrops/，其中三幅来自 Siiocc/chrome-blake-theme）、
 // 素纸（不放画，只留水彩晕染），或者自己的一张图片（缩到长边 2560 存进 IndexedDB：localStorage 放不下）。
 // 选的是哪个记在 prefs.backdrop。夜间（经验之歌）把画压暗，阅读、合并时淡下去：见 app.css 的 .dayplate
 import { $, esc } from './util.js';
@@ -14,6 +14,8 @@ export const BACKDROPS = [
   { id: 'day', name: '今日之诗', en: 'The plate of the day', note: '布莱克原版插图，每天换一幅' },
   { id: 'roses', name: '玫瑰与新月', en: 'Roses & the crescent', note: '河边的村庄', fit: 'cover' },
   { id: 'lane', name: '乡间小路', en: 'The lane & the fold', note: '羊群、石墙和教堂', fit: 'cover' },
+  { id: 'orchard', name: '果园与溪桥', en: 'The orchard & brook', note: '苹果花、石桥与薄雾', fit: 'cover' },
+  { id: 'heath', name: '荒原与星月', en: 'The heath & starlight', note: '古树、石径与暮星', fit: 'cover' },
   { id: 'border', name: '花边插页', en: 'A bordered leaf', note: '竖幅，窗口窄时最好看', fit: 'tall' },
   { id: 'plain', name: '素纸', en: 'Plain paper', note: '不放画，只留水彩晕染' },
   { id: 'custom', name: '自己的图片', en: 'One of your own', note: '选一张图片…' },

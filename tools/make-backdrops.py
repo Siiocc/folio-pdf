@@ -1,4 +1,4 @@
-"""背景图：把 Chrome 主题 Riyel-Sinix/chrome-blake-theme 的三幅水彩做成查看器的背景（⋯ 菜单 / 首页右下角「背景」）。
+"""背景图：把 Chrome 主题 Siiocc/chrome-blake-theme 的水彩画做成查看器的背景（⋯ 菜单 / 首页右下角「背景」）。
 
     python -P tools/make-backdrops.py [主题的 source 文件夹]     # 默认 D:\\Documents\\NC\\chrome-blake-theme\\source
 

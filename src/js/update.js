@@ -5,7 +5,7 @@ import { store } from './store.js';
 import * as platform from './platform.js';
 import { toast } from './ui.js';
 
-const REPO = 'Riyel-Sinix/folio-pdf';
+const REPO = 'Siiocc/folio-pdf';
 const API = `https://api.github.com/repos/${REPO}/releases/latest`;
 const PAGE = `https://github.com/${REPO}/releases/latest`;
 const EVERY = 20 * 3600e3;            // 自动检查的间隔：差不多一天一次
