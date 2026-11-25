@@ -73,8 +73,8 @@ self.onmessage = async ({ data }) => {
     if (dropLast) { const last = pages[pages.length - 1]; doc.removePage(pages.length - 1); doc.context.delete(last.ref); }
     const now = new Date();
     if (title) doc.setTitle(title);
-    doc.setCreator('PDF 查看器');
-    doc.setProducer('PDF 查看器（pdf.js + pdf-lib）');
+    doc.setCreator('书叶 · Folio');
+    doc.setProducer('书叶 · Folio（pdf.js + pdf-lib）');
     doc.setCreationDate(now);
     doc.setModificationDate(now);
     const out = await doc.save({ useObjectStreams: true, addDefaultPage: false, updateFieldAppearances: false });

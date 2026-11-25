@@ -1,34 +1,7 @@
 /* 页边藤蔓（布莱克《天真与经验之歌》式：天真是花叶卷须，经验是荆棘、浆果与火焰），从课表站移植。
- * 两根藤沿窗口左右边缘往上长，到顶部弯成拱，拱顶上坐着 Claude Code 的像素小螃蟹 Clawd。
+ * 两根藤沿窗口左右边缘往上长，到顶部弯成拱。
  * 拱顶压在标题栏下沿（不挡标签页和窗口按钮），阅读时地面的草 / 火焰收起来。 */
 import { getTheme } from './store.js';
-
-/* Clawd：
- *    ▐▛███▜▌
- *   ▝▜█████▛▘
- *     ▘▘ ▝▝
- * 每个字符是 2×2 的方块像素，终端字符格高约为宽的两倍，所以像素画成 p × 2p。 */
-const CLAWD_ROWS = [
-  '...############...',
-  '...##.######.##...',
-  '.################.',
-  '...############...',
-  '....#.#....#.#....',
-];
-function clawdSVG(cx, footY, p, delay) {
-  const x0 = cx - 9 * p, y0 = footY - 10 * p, rects = [];
-  CLAWD_ROWS.forEach((row, r) => {
-    for (let c = 0; c < row.length; c++) {
-      if (row[c] !== '#') continue;
-      let e = c;
-      while (row[e + 1] === '#') e++;
-      rects.push(`<rect x="${(x0 + c * p).toFixed(1)}" y="${(y0 + r * 2 * p).toFixed(1)}" width="${((e - c + 1) * p).toFixed(1)}" height="${(2 * p).toFixed(1)}"/>`);
-      c = e;
-    }
-  });
-  const lid = c => `<rect class="lid" x="${(x0 + c * p).toFixed(1)}" y="${(y0 + 2 * p).toFixed(1)}" width="${p.toFixed(1)}" height="${(2 * p).toFixed(1)}"/>`;
-  return `<g class="clawd bud" style="--d:${delay}" fill="#D77757" shape-rendering="crispEdges"><title>Claude</title>${rects.join('')}${lid(5)}${lid(12)}</g>`;
-}
 
 function rng(seed) {
   return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
@@ -44,7 +17,7 @@ export function createVines(svg, box) {
     if (key === lastKey && !growNext) return;
     lastKey = key;
     const f = n => n.toFixed(1), rand = rng(23);
-    const k = W < 900 ? .75 : 1, base = 9, topY = 104, archY = 49, cp = W < 900 ? 2.6 : 3;
+    const k = W < 900 ? .75 : 1, base = 9, topY = 104, archY = 49;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     const stems = [];
     for (const side of [0, 1]) {
@@ -131,7 +104,7 @@ export function createVines(svg, box) {
     svg.innerHTML = '<defs><linearGradient id="flame" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#C8402A"/><stop offset=".6" stop-color="#EE8A3A"/><stop offset="1" stop-color="#F7D47A"/></linearGradient></defs>'
       + `<g class="ground">${ground.join('')}</g>`
       + stems.map((d, i) => `<path class="stem" d="${d}" stroke="var(--vine)" stroke-width="${dark ? 2.3 : 2}" style="stroke-dasharray:${f(lens[i])};--len:${f(lens[i])}"/>`).join('')
-      + feats.join('') + sky.join('') + clawdSVG(W / 2, archY + 1, cp, 2300);   // 坐在拱顶上
+      + feats.join('') + sky.join('');
     svg.classList.toggle('grow', growNext);
     growNext = false;
   }

@@ -108,10 +108,10 @@ self.onmessage = async ({ data }) => {
       if (info.Author) doc.setAuthor(info.Author);
       if (info.Subject) doc.setSubject(info.Subject);
       if (info.Keywords) doc.getInfoDict().set(PDFName.of('Keywords'), PDFHexString.fromText(info.Keywords));
-      doc.setCreator(info.Creator || 'PDF 查看器');
+      doc.setCreator(info.Creator || '书叶 · Folio');
       if (info.created) doc.setCreationDate(new Date(info.created));
     }
-    doc.setProducer('PDF 查看器（pdf.js + pdf-lib）');
+    doc.setProducer('书叶 · Folio（pdf.js + pdf-lib）');
     doc.setModificationDate(new Date());
     const out = await doc.save({ useObjectStreams: true, addDefaultPage: false, updateFieldAppearances: false });
     self.postMessage({ ok: true, bytes: out }, [out.buffer]);

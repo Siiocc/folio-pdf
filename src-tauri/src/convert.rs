@@ -194,7 +194,7 @@ pub async fn print_pdf(app: AppHandle, job: PrintJob) -> Result<Response, String
     let (loaded_tx, mut loaded_rx) = tauri::async_runtime::channel::<()>(8);
     // 看不见、不进任务栏、不抢焦点；页面里的脚本一律不跑（要转的网页可能是从网上下载的），也不许跳到别的网址
     let mut b = WebviewWindowBuilder::new(&app, &label, WebviewUrl::External(url))
-        .title("PDF 查看器 · 打印")
+        .title("书叶 · 打印")
         .inner_size(820.0, 1100.0)
         .visible(false)
         .focused(false)

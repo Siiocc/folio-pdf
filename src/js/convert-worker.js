@@ -100,8 +100,8 @@ self.onmessage = async ({ data }) => {
       page.pushOperators(pushGraphicsState(), concatTransformationMatrix(...placement(im.orient, x, y, w, h)), drawObject(name), popGraphicsState());
     }
     if (title) doc.setTitle(title);
-    doc.setCreator('PDF 查看器');
-    doc.setProducer('PDF 查看器（pdf-lib）');
+    doc.setCreator('书叶 · Folio');
+    doc.setProducer('书叶 · Folio（pdf-lib）');
     const out = await doc.save({ useObjectStreams: true });
     self.postMessage({ ok: true, bytes: out }, [out.buffer]);
   } catch (e) {

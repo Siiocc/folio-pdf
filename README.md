@@ -1,7 +1,7 @@
-# PDF 查看器
+# 书叶 · Folio
 
 威廉·布莱克《天真与经验之歌》插画风格的 PDF 查看器：阅读、批注、签名、整理页面、合并，还能把图片、Office 文档、文本和网页转成 PDF。
-日间是「天真之歌」（晨光、水彩、花叶藤蔓），夜间是「经验之歌」（深夜、荆棘、星与火焰），拱顶上坐着 Claude Code 的小螃蟹 Clawd；
+日间是「天真之歌」（晨光、水彩、花叶藤蔓），夜间是「经验之歌」（深夜、荆棘、星与火焰）；
 首页每天一首「今日之诗」，背景默认是那首诗的 Copy Z 原版插图（美国国会图书馆藏，公有领域），也可以换成三幅水彩画、素纸或者自己的图片。
 
 ![阅读与批注：高亮、画笔、文字批注](docs/screenshot-reader.jpg)
@@ -84,7 +84,7 @@
 | `src/convert.html` / `src/js/convert-app.js` | 资源管理器右键「转成 PDF」的小窗口：只显示进度和结果，转好的存到源文件旁边，不开主窗口 |
 | `src/js/home.js` | 首页、最近打开、今日之诗 |
 | `src/js/backdrop.js` | 背景：今日之诗、水彩画、素纸、自己的图片（存进 IndexedDB）和选择框 |
-| `src/js/vines.js` | 页边藤蔓和 Clawd |
+| `src/js/vines.js` | 页边藤蔓 |
 | `src/js/update.js` | 新版本提示：问 GitHub 最新发布的版本，比现在的新就提示 |
 | `src/js/platform.js` | 桌面版 / 网页版的差别（读写文件、对话框、窗口按钮） |
 | `src/vendor/` | pdf.js 6.4.299、pdf-lib 1.17.1、marked 18.1.2（`npm run vendor` 从 node_modules 拷过来） |

@@ -1,4 +1,4 @@
-/* PDF 查看器 · 布莱克《天真与经验之歌》插画风
+/* 书叶 · Folio · 布莱克《天真与经验之歌》插画风
  * 日间 = 天真之歌（晨光、天青、樱草黄、花叶藤蔓），夜间 = 经验之歌（深夜、普鲁士蓝、炉火、荆棘与星）
  * 设计变量与课表站（schedule-f1）一致：霞鹜文楷 + IM Fell English、手绘不规则圆角、纸纹、水彩晕染 */
 @font-face{font-family:"Songs Han";src:url(../assets/fonts/wk-400.woff2) format("woff2");font-weight:400;font-display:swap}
@@ -102,8 +102,6 @@ body[data-view=merge] .dayplate[data-kind=pic]{opacity:.75}
 .vines.grow .bud{animation:bud .7s ease both;animation-delay:calc(var(--d) * 1ms + 500ms)}
 @keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
 @keyframes bud{from{opacity:0}}
-.vines .clawd .lid{opacity:0;animation:blink 6s 3s infinite}
-@keyframes blink{0%,92%,100%{opacity:0}94%,97%{opacity:1}}
 body[data-view=doc] .vines .ground{display:none}
 .stage{grid-row:2;position:relative;z-index:1;min-height:0}
 .view{position:absolute;inset:0;display:none}
@@ -115,7 +113,7 @@ body[data-view=doc] .vines .ground{display:none}
 .brand:hover{background:var(--accent-soft)}
 .brand.on{color:var(--text)}
 .brand img{width:24px;height:24px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.18))}
-.tabs{flex:0 1 auto;display:flex;align-items:flex-end;gap:3px;min-width:0;max-width:calc(50% - 112px);padding-top:6px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}   /* 标题栏正中留给 Clawd；标签太多时可以用滚轮横向滚 */
+.tabs{flex:0 1 auto;display:flex;align-items:flex-end;gap:3px;min-width:0;padding-top:6px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}   /* 标签太多时可以用滚轮横向滚 */
 .tabs::-webkit-scrollbar{display:none}
 .tab{position:relative;flex:0 1 196px;min-width:50px;max-width:196px;height:30px;display:flex;align-items:center;gap:6px;padding:0 4px 0 10px;
   border-radius:13px 16px 0 0 / 11px 13px 0 0;color:var(--muted);font-size:13.5px;line-height:1;transition:background .2s,color .2s;cursor:default}

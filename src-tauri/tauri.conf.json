@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "PDF 查看器",
+  "productName": "书叶 · Folio",
   "mainBinaryName": "pdf-viewer",
   "version": "1.4.2",
   "identifier": "com.siiocc.pdfviewer",
@@ -21,8 +21,8 @@
     "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico"],
     "publisher": "siiocc",
     "copyright": "Copyright © 2026 Riyel-Sinix（MIT 许可证）；插图：William Blake《天真与经验之歌》Copy Z，公有领域",
-    "shortDescription": "PDF 查看器",
-    "longDescription": "布莱克《天真与经验之歌》插画风格的 PDF 查看器：阅读、查找、打印，批注、签名、整理页面，合并 PDF，把图片、Office 文档、文本和网页转成 PDF。",
+    "shortDescription": "书叶 · Folio",
+    "longDescription": "书叶 · Folio — 布莱克《天真与经验之歌》插画风格的 PDF 查看器：阅读、查找、打印，批注、签名、整理页面，合并 PDF，把图片、Office 文档、文本和网页转成 PDF。",
     "resources": {
       "target/shell-menu/release/pdf_viewer_shell.dll": "shell-menu/pdf_viewer_shell.dll",
       "target/shell-menu/PDFViewer.ShellMenu.msix": "shell-menu/PDFViewer.ShellMenu.msix",

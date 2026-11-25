@@ -133,10 +133,10 @@ fn build_window(app: &AppHandle, label: &str) -> tauri::Result<WebviewWindow> {
         // 只许停留在应用自己的页面里；PDF 里的外部链接由前端交给系统浏览器
         .on_navigation(|url| matches!(url.scheme(), "tauri" | "asset") || url.host_str() == Some("tauri.localhost"));
     b = if main {
-        b.title("PDF 查看器").inner_size(1280.0, 860.0).min_inner_size(760.0, 520.0)
+        b.title("书叶 · Folio").inner_size(1280.0, 860.0).min_inner_size(760.0, 520.0)
     } else {
         // 只是个进度窗口：小、不能改大小，在任务栏里能看到
-        b.title("转成 PDF · PDF 查看器").inner_size(460.0, 260.0).resizable(false).maximizable(false)
+        b.title("转成 PDF · 书叶").inner_size(460.0, 260.0).resizable(false).maximizable(false)
     };
     let test_data = test_data_dir();
     b = match &test_data {

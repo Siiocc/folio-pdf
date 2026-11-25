@@ -108,7 +108,7 @@ function activate(id) {
 }
 function updateTitle() {
   const t = activeDoc();
-  platform.win.setTitle(t ? `${isDirty(t) ? '● ' : ''}${t.name} — PDF 查看器` : state.active === 'merge' ? '合并 PDF — PDF 查看器' : 'PDF 查看器');
+  platform.win.setTitle(t ? `${isDirty(t) ? '● ' : ''}${t.name} — 书叶 · Folio` : state.active === 'merge' ? '合并 PDF — 书叶 · Folio' : '书叶 · Folio');
 }
 const SPROUT = '<svg class="sprout" viewBox="0 0 64 64"><path d="M32 58C31 44 34 34 30 22S33 8 34 6"/><path class="lf" d="M31 30c-6-1-11-6-12-11 6 0 11 4 12 11z" style="animation-delay:.5s"/><path class="lf" d="M32 22c6-2 10-7 10-12-6 1-10 5-10 12z" style="animation-delay:.8s"/></svg>';
 function showVState(tab) {

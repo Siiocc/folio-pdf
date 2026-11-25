@@ -36,7 +36,7 @@ export function renderHome(actions) {
   root.innerHTML = `<div class="home-in">
     <section class="plate panel">
       ${FLOURISH}
-      <h1>PDF 查看器</h1>
+      <h1>书叶 · Folio</h1>
       <div class="sub">Shewing the Leaves of many Books, &amp; the Binding of them into One</div>
       <div class="sub2">READING · AND · BINDING</div>
       <div class="acts">
