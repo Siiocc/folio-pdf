@@ -12,8 +12,8 @@
 
 在 [Releases](https://github.com/Siiocc/folio-pdf/releases/latest) 里：
 
-- **`PDF-Viewer_…_x64-setup.exe`**：安装版，装好后可以设为 .pdf 的默认打开方式（装在当前用户下，不需要管理员权限）；
-- **`PDF-Viewer_…_x64-portable.exe`**：免安装，下载下来双击就能用。
+- **`Folio_…_x64-setup.exe`**：安装版，装好后可以设为 .pdf 的默认打开方式（装在当前用户下，不需要管理员权限）；
+- **`Folio_…_x64-portable.exe`**：免安装，下载下来双击就能用。
 
 需要 64 位 Windows 10 / 11，以及 Microsoft Edge WebView2 运行时（Windows 11 自带；没有的话安装版会自动下载）。
 程序没有代码签名，第一次运行时 Windows 可能提示「Windows 已保护你的电脑」，点「更多信息」→「仍要运行」即可。
